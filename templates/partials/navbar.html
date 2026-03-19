@@ -1,0 +1,30 @@
+<header class="site-header">
+  <nav class="navbar container" aria-label="Primary">
+    <a class="brand" href="#financial-adviser">
+      <span class="brand-mark">A</span>
+      <span>
+        <strong>{{ content.brand.logo_text }}</strong>
+        <small>{{ content.brand.tagline }}</small>
+      </span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" id="nav-menu">
+      {% for item in content.navigation %}
+        <a href="#{{ item.target }}">{{ item.label }}</a>
+      {% endfor %}
+      <a class="button button-small" href="#contact">[Book Intro Call Placeholder]</a>
+    </div>
+  </nav>
+</header>

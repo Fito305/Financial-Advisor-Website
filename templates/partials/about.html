@@ -1,0 +1,22 @@
+<section class="section section-alt" id="about-me">
+  <div class="container about-grid">
+    <div class="section-heading">
+      <p class="eyebrow">{{ content.about.heading }}</p>
+      <h2>{{ content.about.title }}</h2>
+      <p>{{ content.about.bio }}</p>
+      <p>{{ content.about.philosophy }}</p>
+    </div>
+
+    <div class="about-side">
+      <div class="image-placeholder">{{ content.about.image_label }}</div>
+      <div class="info-grid">
+        {% for item in content.about.highlights %}
+          <article class="info-card">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

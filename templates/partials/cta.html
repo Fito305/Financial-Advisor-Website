@@ -1,0 +1,45 @@
+<section class="section cta-section" id="contact">
+  <div class="container cta-grid">
+    <div class="cta-copy">
+      <p class="eyebrow">Contact</p>
+      <h2>{{ content.contact.heading }}</h2>
+      <p>{{ content.contact.intro }}</p>
+
+      <div class="contact-details">
+        <p><strong>Phone</strong> {{ content.contact.details.phone }}</p>
+        <p><strong>Email</strong> {{ content.contact.details.email }}</p>
+      </div>
+
+      <a class="button button-secondary" href="{{ content.contact.calendly.url }}">
+        {{ content.contact.calendly.label }}
+      </a>
+    </div>
+
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required />
+      </div>
+
+      <button
+        class="button"
+        type="submit"
+        data-default-label="{{ content.contact.form.submit_label }}"
+        data-submitting-label="{{ content.contact.form.submitting_label }}"
+      >
+        {{ content.contact.form.submit_label }}
+      </button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section class="section section-accent" id="investment-specialty">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ content.specialties.heading }}</p>
+      <h2>[Investment Focus Placeholder]</h2>
+      <p>{{ content.specialties.intro }}</p>
+    </div>
+
+    <div class="card-grid specialties-grid">
+      {% for item in content.specialties["items"] %}
+        <article class="specialty-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

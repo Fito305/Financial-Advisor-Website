@@ -1,0 +1,18 @@
+activate() {
+    source .venv/bin/activate
+}
+
+
+start() {
+    .venv/bin/uvicorn app.main:app --reload
+}
+
+
+test() {
+    .venv/bin/pytest
+}
+
+
+install() {
+    .venv/bin/pip install -r requirements-dev.txt
+}

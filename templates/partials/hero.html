@@ -1,0 +1,32 @@
+<section class="hero section" id="financial-adviser">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ content.hero.eyebrow }}</p>
+      <h1>{{ content.hero.headline }}</h1>
+      <p class="hero-subheadline">{{ content.hero.subheadline }}</p>
+      <p class="hero-summary">{{ content.hero.summary }}</p>
+      <div class="hero-actions">
+        <a class="button" href="#{{ content.hero.primary_cta.target }}">
+          {{ content.hero.primary_cta.label }}
+        </a>
+        <a class="button button-secondary" href="#{{ content.hero.secondary_cta.target }}">
+          {{ content.hero.secondary_cta.label }}
+        </a>
+      </div>
+      <div class="hero-stats" aria-label="Placeholder trust signals">
+        {% for stat in content.hero.stats %}
+          <article class="stat-card">
+            <strong>{{ stat.value }}</strong>
+            <span>{{ stat.label }}</span>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="{{ content.hero.image_label }}">
+      <div class="portrait-placeholder">
+        <span>{{ content.hero.image_label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-heading centered">
+      <p class="eyebrow">{{ content.testimonials.heading }}</p>
+      <h2>[Client Confidence Placeholder]</h2>
+      <p>{{ content.testimonials.intro }}</p>
+    </div>
+
+    <div class="card-grid testimonials-grid">
+      {% for item in content.testimonials["items"] %}
+        <article class="testimonial-card">
+          <p class="quote">{{ item.quote }}</p>
+          <div class="testimonial-meta">
+            <strong>{{ item.name }}</strong>
+            <span>{{ item.title }}</span>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
