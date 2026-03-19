@@ -1,7 +1,0 @@
-.env.example
-.venv
-AGENT.md
-.env
-__pycache__/
-*.pyc
-data/*.db
